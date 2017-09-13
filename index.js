@@ -38,6 +38,7 @@ class SuperGrid extends Component {
 
   renderRow(data, sectionId, rowId) {
     const { itemWidth, spacing, containerWidth, fixed } = this.state;
+		const { customColumnStyle, customRowStyle } = this.props;
 
     const rowStyle = {
       flexDirection: 'row',
@@ -59,9 +60,9 @@ class SuperGrid extends Component {
     }
 
     return (
-      <View style={rowStyle}>
+      <View style={[rowStyle, customRowStyle]}>
         {(data || []).map((item, i) => (
-          <View key={`${rowId}_${i}`} style={columnStyle}>
+          <View key={`${rowId}_${i}`} style={[columnStyle, customColumnStyle]}>
             <View style={itemStyle}>
               {this.props.renderItem(item, i)}
             </View>
