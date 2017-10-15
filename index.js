@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ViewPropTypes, ListView, Dimensions } from 'react-native';
+import { View, ViewPropTypes, ListView, Dimensions } from 'react-native';
 import { chunkArray } from './utils';
 
 class SuperGrid extends Component {
