@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { View, ListView, Dimensions } from 'react-native';
+import { ViewPropTypes, ListView, Dimensions } from 'react-native';
 import { chunkArray } from './utils';
 
 class SuperGrid extends Component {
@@ -97,7 +97,7 @@ SuperGrid.propTypes = {
   itemWidth: PropTypes.number,
   fixed: PropTypes.bool,
   spacing: PropTypes.number,
-  style: View.propTypes.style,
+  style: ViewPropTypes.style,
 };
 
 SuperGrid.defaultProps = {
